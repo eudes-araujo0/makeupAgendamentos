@@ -596,10 +596,6 @@ video {
   margin-top: 2rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .flex {
   display: flex;
 }
@@ -624,12 +620,16 @@ video {
   height: 1.25rem;
 }
 
+.h-56 {
+  height: 14rem;
+}
+
 .h-\[1\.6px\] {
   height: 1.6px;
 }
 
-.h-\[400px\] {
-  height: 400px;
+.h-\[550px\] {
+  height: 550px;
 }
 
 .h-\[70vh\] {
@@ -640,34 +640,6 @@ video {
   height: 100%;
 }
 
-.h-\[40px\] {
-  height: 40px;
-}
-
-.h-\[450px\] {
-  height: 450px;
-}
-
-.h-\[420px\] {
-  height: 420px;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
-.h-\[550px\] {
-  height: 550px;
-}
-
-.h-48 {
-  height: 12rem;
-}
-
-.h-56 {
-  height: 14rem;
-}
-
 .w-1\/3 {
   width: 33.333333%;
 }
@@ -676,16 +648,16 @@ video {
   width: 0.625rem;
 }
 
+.w-48 {
+  width: 12rem;
+}
+
 .w-5 {
   width: 1.25rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-48 {
-  width: 12rem;
 }
 
 .max-w-6xl {
@@ -781,32 +753,22 @@ video {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
-}
-
-.bg-slate-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity, 1));
-}
-
 .bg-slate-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
 
-.bg-\[url\(\'\/public\/images\/model\.jpg\'\)\] {
-  background-image: url('/public/images/model.jpg');
+.bg-\[url\(\'\/images\/model\.jpg\'\)\] {
+  background-image: url('/images/model.jpg');
 }
 
 .bg-gradient-to-b {
@@ -815,6 +777,10 @@ video {
 
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\/public\/\/images\/model\.jpg\'\)\] {
+  background-image: url('/public//images/model.jpg');
 }
 
 .from-amber-400 {
@@ -1012,14 +978,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:h-\[550px\] {
-    height: 550px;
-  }
-
-  .md\:h-\[750px\] {
-    height: 750px;
-  }
-
   .md\:h-\[500px\] {
     height: 500px;
   }
