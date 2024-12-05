@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sávia Araújo | Agendamentos</title>
+    <link rel="stylesheet" href="/style/output.css">
+    <link rel="stylesheet" href="/style/font.css">
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800">
+
+    <header class="bg-gray-900 text-white">
+        <div class="max-w-6xl e mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-3xl font-serif font-bold tracking-wide">Sávia Araújo</h1>
+    
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="#services" class="hover:text-gray-400">Serviços</a>
+                <a href="#schedule" class="hover:text-gray-400">Agendar</a>
+                <a href="#about" class="hover:text-gray-400">Sobre Mim</a>
+                <a href="#contact" class="hover:text-gray-400">Contato</a>
+            </nav>
+            <button id="menu-toggle" class="block md:hidden text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+    </header>
+    
+    <!-- Menu lateral oculto à direita -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-gray-900 text-white transform translate-x-full transition-transform duration-300">
+        <div class="p-6">
+            <button id="menu-close" class="text-xl focus:outline-none">
+                ✕
+            </button>
+            <nav class="mt-8 space-y-4">
+                <a href="index.html" class="block text-3xl font-cinzel py-4">Sávia Araújo</a>
+                <a href="#services" class="block hover:text-gray-400">Serviços</a>
+                <a href="#schedule" class="block hover:text-gray-400">Agendar</a>
+                <a href="#about" class="block hover:text-gray-400">Sobre Mim</a>
+                <a href="#contact" class="block hover:text-gray-400">Contato</a>
+            </nav>
+        </div>
+    </div>
+
+  <script src="/script/main.js"></script>
+  <script src="/script/testeDash.js"></script>
+</body>
+</html>
