@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileMenu = document.getElementById("mobile-menu");
     const nameHeader = document.getElementById("nameHeader");
   
-    // Abrir menu lateral
     menuToggle.addEventListener("click", () => {
         mobileMenu.classList.remove("translate-x-full"); // Remove a classe que esconde o menu
         mobileMenu.classList.add("translate-x-0"); // Adiciona a classe para mostrar o menu
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.classList.add("hidden")
     });
 
-    // Fechar o menu lateral
     menuClose.addEventListener("click", () => {
         mobileMenu.classList.remove("translate-x-0"); // Remove a classe para mostrar o menu
         mobileMenu.classList.add("translate-x-full");
@@ -20,8 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.classList.remove("hidden"); // Adiciona a classe para esconder o menu
     });
   });
-  
-  //btnagendamentos
 
 const btnAgendamentos = document.getElementById("btnAgendamentos");
 

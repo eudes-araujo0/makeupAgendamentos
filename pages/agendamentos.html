@@ -9,39 +9,113 @@
 </head>
 <body class="bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800">
 
-    <header class="bg-gray-900 text-white">
-        <div class="max-w-6xl e mx-auto px-4 py-6 flex justify-between items-center">
-            <h1 class="text-3xl font-serif font-bold tracking-wide">Sávia Araújo</h1>
-    
-            <nav class="hidden md:flex space-x-6 text-lg">
-                <a href="#services" class="hover:text-gray-400">Serviços</a>
-                <a href="#schedule" class="hover:text-gray-400">Agendar</a>
-                <a href="#about" class="hover:text-gray-400">Sobre Mim</a>
-                <a href="#contact" class="hover:text-gray-400">Contato</a>
-            </nav>
-            <button id="menu-toggle" class="block md:hidden text-2xl focus:outline-none">
-                ☰
-            </button>
-        </div>
-    </header>
-    
-    <!-- Menu lateral oculto à direita -->
-    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-gray-900 text-white transform translate-x-full transition-transform duration-300">
-        <div class="p-6">
-            <button id="menu-close" class="text-xl focus:outline-none">
-                ✕
-            </button>
-            <nav class="mt-8 space-y-4">
-                <a href="index.html" class="block text-3xl font-cinzel py-4">Sávia Araújo</a>
-                <a href="#services" class="block hover:text-gray-400">Serviços</a>
-                <a href="#schedule" class="block hover:text-gray-400">Agendar</a>
-                <a href="#about" class="block hover:text-gray-400">Sobre Mim</a>
-                <a href="#contact" class="block hover:text-gray-400">Contato</a>
-            </nav>
-        </div>
-    </div>
+  <header class="bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+        <a href="/index.html">
+        <h1 id="nameHeader" class="text-3xl font-serif font-bold tracking-wide">Sávia Araújo</h1></a>
 
-  <script src="/script/main.js"></script>
-  <script src="/script/testeDash.js"></script>
+        <nav class="hidden md:flex space-x-6 text-lg">
+            <a href="#services" class="hover:text-gray-400">Serviços</a>
+            <a href="/pages/agendamentos.html" class="hover:text-gray-400">Agendar</a>
+            <a href="#about" class="hover:text-gray-400">Sobre Mim</a>
+            <a href="#contact" class="hover:text-gray-400">Contato</a>
+        </nav>
+        <button id="menu-toggle" class="block md:hidden text-2xl focus:outline-none">
+            ☰
+        </button>
+    </div>
+</header>
+
+<!-- Menu lateral oculto à direita -->
+<div id="mobile-menu" class="fixed inset-y-0 z-[1] right-0 w-64 bg-gray-900 text-white transform translate-x-full transition-transform duration-300">
+    <div class="p-6">
+        <button id="menu-close" class="text-xl focus:outline-none">
+            ✕
+        </button>
+        <nav class="mt-8 space-y-4">
+            <a href="/index.html" class="block text-3xl font-cinzel py-4">Sávia Araújo</a>
+            <a href="#services" class="block hover:text-gray-400">Serviços</a>
+            <a href="/pages/agendamentos.html" class="block hover:text-gray-400">Agendar</a>
+            <a href="#about" class="block hover:text-gray-400">Sobre Mim</a>
+            <a href="#contact" class="block hover:text-gray-400">Contato</a>
+        </nav>
+    </div>
+</div>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Agende um horário</h2>
+
+        
+        
+        <section class="text-center mb-8">
+            <img src="/images/aboutSavia.jpg" alt="Sávia Araújo" class="w-32 h-32 mx-auto rounded-full object-cover shadow-md">
+            <h3 class="text-2xl font-semibold text-gray-800 mt-4">Sávia Araújo</h3>
+            <p class="text-gray-600 mt-2">Escolha um horário disponível abaixo para agendar sua maquiagem.</p>
+        </section>
+
+        <section class="max-w-3xl mx-auto p-8 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200 shadow-2xl rounded-3xl mt-12">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-serif font-semibold text-gray-800 mb-8 leading-tight">Selecione a ocasião da sua maquiagem</h3>
+                <div class="input-wrapper flex flex-col gap-4 items-start font-semibold">
+                    <div class="flex items-center gap-3">
+                        <input id="makeNoivado" type="radio" name="makeup" class="form-radio text-amber-600 border-2 border-amber-500 focus:ring-amber-600 transition duration-300 ease-in-out transform hover:scale-105">
+                        <label for="makeNoivado" class="text-xl text-gray-800 hover:text-amber-600 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105">Noivado e Casamento</label>
+                    </div>
+            
+                    <div class="flex items-center gap-3">
+                        <input id="makeFestas" type="radio" name="makeup" class="form-radio text-amber-600 border-2 border-amber-500 focus:ring-amber-600 transition duration-300 ease-in-out transform hover:scale-105">
+                        <label for="makeFestas" class="text-xl text-gray-800 hover:text-amber-600 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105">Festas e Eventos</label>
+                    </div>
+            
+                    <div class="flex items-center gap-3">
+                        <input id="makeCasual" type="radio" name="makeup" class="form-radio text-amber-600 border-2 border-amber-500 focus:ring-amber-600 transition duration-300 ease-in-out transform hover:scale-105">
+                        <label for="makeCasual" class="text-xl text-gray-800 hover:text-amber-600 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105">Casual</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        
+        <section class="max-w-3xl mx-auto p-8 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200 shadow-2xl rounded-3xl mt-12">
+            <!-- Cabeçalho do mês -->
+            <div class="text-center mb-6">
+                <span id="month-year" class="text-2xl font-semibold text-gray-900"></span>
+            </div>
+        
+            <!-- Carrossel de datas com setas alinhadas -->
+            <div class="flex items-center space-x-4 sm:space-x-6">
+                <button id="prev-date" 
+                    class="text-gray-600 hover:text-gray-800 text-2xl p-2 rounded-full border border-gray-300 hover:border-gray-400 active:bg-gray-200">
+                    &lt;
+                </button>
+                <div class="overflow-hidden flex-1">
+                    <div id="carousel" class="flex space-x-2 justify-center transition-transform duration-300 overflow-auto scrollbar-hide sm:space-x-4">
+                        <!-- Datas geradas dinamicamente aqui -->
+                    </div>
+                </div>
+                <button id="next-date" 
+                    class="text-gray-600 hover:text-gray-800 text-2xl p-2 rounded-full border border-gray-300 hover:border-gray-400 active:bg-gray-200">
+                    &gt;
+                </button>
+            </div>
+        
+            <!-- Contêiner para exibir os horários disponíveis -->
+            <div id="time-slots-container" class="mt-8">
+                <h3 class="text-lg font-semibold text-center font-serif text-gray-800 mb-4">Horários disponíveis</h3>
+                <div id="time-slots" class="grid grid-cols-3 gap-4 sm:grid-cols-3 md:grid-cols-3 font-serif lg:grid-cols-3">
+                    <!-- Horários gerados dinamicamente aqui -->
+                </div>
+            </div>
+        </section>
+        
+        
+        
+    </main>
+    <script src="/script/main.js"></script>
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="/script/scrollReveal.js" defer></script>
+    <script src="/script/testeDash.js"></script>
 </body>
 </html>
