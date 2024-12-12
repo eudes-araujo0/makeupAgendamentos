@@ -1,15 +1,12 @@
 {
-  "name": "makeup---savia",
+  "name": "makeupssavia",
   "version": "1.0.0",
   "description": "Agendamentos Savia Araujo",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
      "build:css": "npx tailwindcss -i ./style/input.css -o ./style/output.css --watch"
-=======
-     "build:css": "npx tailwindcss -i ./public/style/input.css -o ./public/style/output.css --watch"
->>>>>>> f65476131e4f6892a2bd16d80a65ac09cfa09165
+
   },
   "author": "Eudes Araújo",
   "license": "ISC",
