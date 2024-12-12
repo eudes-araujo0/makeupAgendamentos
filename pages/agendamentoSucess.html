@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Confirmado | Sávia Araújo</title>
+    <link rel="stylesheet" href="/style/output.css">
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800">
+
+    <header class="bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="/index.html">  
+            <h1 id="nameHeader" class="text-3xl font-serif font-bold tracking-wide">Sávia Araújo</h1></a>
+    
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="#services" class="hover:text-gray-400">Serviços</a>
+                <a href="/pages/agendamentos.html" class="hover:text-gray-400">Agendar</a>
+                <a href="#about" class="hover:text-gray-400">Sobre Mim</a>
+                <a href="#contact" class="hover:text-gray-400">Contato</a>
+            </nav>
+            <button id="menu-toggle" class="block md:hidden text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <div class="flex justify-center items-center min-h-screen bg-gray-100">
+        <main class="max-w-3xl mx-auto px-4 py-12 text-center bg-white shadow-lg rounded-lg">
+            <!-- Imagem e agradecimento -->
+            <section>
+                <img src="/images/aboutSavia.jpg" alt="Sávia Araújo" class="w-32 h-32 mx-auto rounded-full object-cover shadow-md">
+                <h2 class="text-3xl font-bold text-gray-800 mt-4">Agradeço por confiar no meu trabalho!</h2>
+                <div class="schedulingSucess flex items-center justify-center border-b-2 border-black mt-4">
+                    <p class="text-lg text-gray-600">Seu agendamento foi realizado com sucesso.</p>
+                    <img class="w-6 h-6 ml-2" src="/images/checkmark.png" alt="Checkmark">
+                </div>
+            </section>
+    
+            <!-- Check mark e confirmação -->
+            <section class="mt-8 grid-cols-4">
+                <h3 class="text-2xl font-semibold text-gray-800 uppercase">Detalhes do agendamento</h3>
+                <div class="schedulingInfo flex flex-col items-start gap-2 uppercase mt-4">
+                    <p><strong>Nome:</strong> <span id="confirmed-name"></span></p>
+                    <p><strong>Maquiagem escolhida:</strong> <span id="makeup-confirmation"></span></p>
+                    <p><strong>Data:</strong> <span id="date-confirmation"></span></p>
+                    <p><strong>Horário:</strong> <span id="time-confirmation"></span></p>
+                    <p><strong>Forma de pagamento:</strong> <span id="payment-confirmation"></span></p>
+                    <p><strong>Valor:</strong> <span id="price-confirmation"></span></p>
+                    <p><strong>Observação:</strong> <span id="confirmed-notes"></span></p>
+                </div>
+            </section>
+    
+            <!-- Botão de voltar -->
+            <section class="mt-8">
+                <a href="/pages/agendamentos.html" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition">Voltar ao agendamento</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="/script/agendamentoSucesso.js"></script>
+    <script src="/script/main.js"></script>
+    <script src="/script/agendamentos.js"></script>
+</body>
+</html>

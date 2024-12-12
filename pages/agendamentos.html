@@ -11,7 +11,7 @@
 
   <header class="bg-gray-900 text-white">
     <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
-        <a href="/index.html">
+        <a href="/index.html">  
         <h1 id="nameHeader" class="text-3xl font-serif font-bold tracking-wide">Sávia Araújo</h1></a>
 
         <nav class="hidden md:flex space-x-6 text-lg">
@@ -36,6 +36,7 @@
             <a href="/index.html" class="block text-3xl font-cinzel py-4">Sávia Araújo</a>
             <a href="#services" class="block hover:text-gray-400">Serviços</a>
             <a href="/pages/agendamentos.html" class="block hover:text-gray-400">Agendar</a>
+            <a href="/pages/agendamentos.html" class="block hover:text-gray-400">Meus horários</a>
             <a href="#about" class="block hover:text-gray-400">Sobre Mim</a>
             <a href="#contact" class="block hover:text-gray-400">Contato</a>
         </nav>
@@ -53,23 +54,23 @@
             <p class="text-gray-600 mt-2">Escolha um horário disponível abaixo para agendar sua maquiagem.</p>
         </section>
 
-        <section class="max-w-3xl mx-auto p-8 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200 shadow-2xl rounded-3xl mt-12">
+        <section id="ocasiaoMake" class="max-w-3xl mx-auto p-8 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200 shadow-2xl rounded-3xl mt-12">
             <div class="text-center mb-8">
-                <h3 class="text-2xl font-serif font-semibold text-gray-800 mb-8 leading-tight">Selecione a ocasião da sua maquiagem</h3>
+                <h3 class="text-2xl font-poppins font-semibold text-gray-800 mb-8 leading-tight">Selecione a ocasião da sua maquiagem</h3>
                 <div class="input-wrapper flex flex-col gap-4 items-start font-semibold">
                     <div class="flex items-center gap-3">
-                        <input id="makeNoivado" type="radio" name="makeup" class="form-radio text-amber-600 border-2 border-amber-500 focus:ring-amber-600 transition duration-300 ease-in-out transform hover:scale-105">
-                        <label for="makeNoivado" class="text-xl text-gray-800 hover:text-amber-600 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105">Noivado e Casamento</label>
+                        <input id="makeNoivado" data-price="500" type="radio" name="makeup" class="form-radio text-amber-600 border-2 border-amber-500 focus:ring-amber-600 transition duration-300 ease-in-out transform hover:scale-105">
+                        <label for="makeNoivado" class="text-xl text-gray-800 hover:text-amber-600 cursor-pointer transition-all duration-300 ease-in-out transform  required ">Noivado e Casamento</label>
                     </div>
             
                     <div class="flex items-center gap-3">
-                        <input id="makeFestas" type="radio" name="makeup" class="form-radio text-amber-600 border-2 border-amber-500 focus:ring-amber-600 transition duration-300 ease-in-out transform hover:scale-105">
-                        <label for="makeFestas" class="text-xl text-gray-800 hover:text-amber-600 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105">Festas e Eventos</label>
+                        <input id="makeFestas" data-price="150" type="radio" name="makeup" class="form-radio text-amber-600 border-2 border-amber-500 focus:ring-amber-600 transition duration-300 ease-in-out transform hover:scale-105">
+                        <label for="makeFestas" class="text-xl text-gray-800 hover:text-amber-600 cursor-pointer transition-all duration-300 ease-in-out transform required">Festas e Eventos</label>
                     </div>
             
                     <div class="flex items-center gap-3">
-                        <input id="makeCasual" type="radio" name="makeup" class="form-radio text-amber-600 border-2 border-amber-500 focus:ring-amber-600 transition duration-300 ease-in-out transform hover:scale-105">
-                        <label for="makeCasual" class="text-xl text-gray-800 hover:text-amber-600 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105">Casual</label>
+                        <input id="makeCasual" data-price="80" type="radio" name="makeup" class="form-radio text-amber-600 border-2 border-amber-500 focus:ring-amber-600 transition duration-300 ease-in-out transform hover:scale-105">
+                        <label for="makeCasual" class="text-xl bg-s text-gray-800 hover:text-amber-600 cursor-pointer transition-all duration-300 ease-in-out transform required">Casual</label>
                     </div>
                 </div>
             </div>
@@ -85,13 +86,13 @@
             </div>
         
             <!-- Carrossel de datas com setas alinhadas -->
-            <div class="flex items-center space-x-4 sm:space-x-6">
+            <div id class="flex items-center space-x-4 sm:space-x-6">
                 <button id="prev-date" 
                     class="text-gray-600 hover:text-gray-800 text-2xl p-2 rounded-full border border-gray-300 hover:border-gray-400 active:bg-gray-200">
                     &lt;
                 </button>
                 <div class="overflow-hidden flex-1">
-                    <div id="carousel" class="flex space-x-2 justify-center transition-transform duration-300 overflow-auto scrollbar-hide sm:space-x-4">
+                    <div id="carousel" class="flex space-x-2 justify-center transition-transform duration-300 overflow-hidden scrollbar-hide sm:space-x-4">
                         <!-- Datas geradas dinamicamente aqui -->
                     </div>
                 </div>
@@ -108,14 +109,103 @@
                     <!-- Horários gerados dinamicamente aqui -->
                 </div>
             </div>
+
+            <button id="confirmarAgendamento" class="relative mx-auto justify-center group overflow-hidden px-6 mt-4 h-12 rounded-full flex space-x-2 items-center bg-gradient-to-r from-amber-400 to-amber-700 hover:to-orange-900 transition-all duration-300">
+                <span class="relative text-lg text-white">Confirmar agendamento</span>
+                <div class="flex items-center -space-x-3 translate-x-3 ">
+                  <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition-all duration-300 group-hover:scale-x-100"></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+            </button>
+            
+            <div id="modal" class="hidden z-[10] p-4 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full">
+                    <h2 class="text-lg font-bold mb-4">Confirmação de Agendamento</h2>
+                    <form id="confirm-form" class="space-y-4">
+                
+                        <div>
+                            <label for="name" class="block text-sm font-medium">Nome completo</label>
+                            <input
+                                type="text"
+                                id="name"
+                                class="w-full border border-gray-300 rounded-md p-2"
+                                required
+                            />
+                        </div>
+            
+                        <div>
+                            <label for="makeup-chosen" class="block text-sm font-medium">Maquiagem escolhida:</label>
+                            <input 
+                                type="text"
+                                id="makeup-chosen"
+                                class="w-full border border-gray-300 rounded-md p-2"
+                                required 
+                                readonly />
+                            <p id="makeup-chosen-label" class="text-sm text-gray-500">Nenhuma maquiagem escolhida</p>
+                        </div>
+            
+                        <div>
+                            <label for="makeup-price" class="block text-sm font-medium">Valor da maquiagem:</label>
+                            <input 
+                                type="text"
+                                id="makeup-prices"
+                                class="w-full border border-gray-300 rounded-md p-2"
+                                required 
+                                readonly />
+                            <p id="makeup-price-none" class="text-sm text-gray-500"></p>
+                        </div>
+                
+                        <div>
+                            <label for="payment" class="block text-sm font-medium">Forma de Pagamento</label>
+                            <select id="payment" class="w-full border border-gray-300 rounded-md p-2" required>
+                                <option value="cartão">Cartão</option>
+                                <option value="dinheiro">Dinheiro</option>
+                                <option value="pix">Pix</option>
+                            </select>
+                        </div>
+                
+                        <div>
+                            <label for="notes" class="block text-sm font-medium">Observação (opcional)</label>
+                            <textarea id="notes" class="w-full border border-gray-300 rounded-md p-2"></textarea>
+                        </div>
+                
+                        <div class="flex justify-end space-x-4">
+                            <button
+                                type="button"
+                                id="cancel-modal"
+                                class="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600"
+                            >
+                                Cancelar
+                            </button>
+                            <button
+                                type="submit"
+                                id="confirm-modal"
+                                class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
+                            >
+                                Confirmar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <button
+    type="button"
+    id="reset-timeslots"
+    class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 mt-4"
+>
+    Resetar Horários
+</button>
         </section>
-        
-        
         
     </main>
     <script src="/script/main.js"></script>
     <script src="https://unpkg.com/scrollreveal" defer></script>
     <script src="/script/scrollReveal.js" defer></script>
-    <script src="/script/testeDash.js"></script>
+    <script src="/script/localStorage.js"></script>
+    <script src="/script/agendamentos.js"></script>
+    <script src="/script/agendamentoSucesso.js"></script>
 </body>
 </html>
