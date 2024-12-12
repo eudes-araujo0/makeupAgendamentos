@@ -5,6 +5,7 @@ export default {
         "./index.html",
         "./pages/**/*.html",
         "./script/**/*.js",
+        "./public/scripts/**/*.js",
       ],
       theme: {
         extend: {
